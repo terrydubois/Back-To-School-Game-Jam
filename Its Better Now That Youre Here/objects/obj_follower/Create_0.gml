@@ -15,6 +15,8 @@ jonahMode = true;
 
 followerText = choose("?", "!", "?!", "??", "...",);
 
+balloonsDec = false;
+
 
 
 var rando = irandom(5);

@@ -5,11 +5,15 @@ draw_set_color(c_white);
 draw_set_alpha(1);
 
 if (idle && textYDest != textYDestOriginal) {
-	for (var i = 0; i < 3; i++) {
-		draw_set_color(c_black);
-		draw_set_alpha(1);
-		draw_text(x + i, y + i, followerText);
+	draw_set_color(c_black);
+	draw_set_alpha(1);
+	for (var i = 0; i < 7; i++) {
+		draw_text(x + lengthdir_x(1, (360 / 8) * i), textY + lengthdir_y(1, (360 / 8) * i), followerText);
 	}
+	for (var i = 0; i < 4; i++) {
+		draw_text(x + i, textY + i, followerText);
+	}
+	draw_set_color(c_white);
 	draw_text(x, textY, followerText);
 }
 

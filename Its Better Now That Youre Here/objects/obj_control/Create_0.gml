@@ -66,23 +66,25 @@ ds_list_add(gameTextList,
 "I DECIDED TO KEEP THIS FEELING GOING"
 );
 
-typeRate = 6;
+typeRate = 8;
 typePos = 0;
 typeString = "";
 
-typeRateIncr = 15;
+typeRateIncr = 20;
 
 currentText = "";
 
-
-
-for (var i = 0; i < 3; i++) {
+balloons = 3;
+for (var i = 0; i < balloons; i++) {
 	var balloonInst = instance_create_layer(obj_char.x, obj_char.y, "InstBalloons", obj_balloon);
 	balloonInst.balloonXOffset = i * random_range(-40, -60) + random_range(40, 50);
 	balloonInst.balloonYOffset = i * random_range(-25, -40) + random_range(-10, 10);
 	balloonInst.dir = 0;
 	balloonInst.dirIncr = 1;
 	balloonInst.len = random_range(40, 60);
+	balloonInst.balloonNum = i;
+	balloonInst.balloonLineX = obj_char.x + 16;
+	balloonInst.balloonLineY = obj_char.y - 66;
 }
 
 

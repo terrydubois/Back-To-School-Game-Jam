@@ -7,8 +7,8 @@ var gameTextX = camera_get_view_x(view_camera[0]) + (camera_get_view_width(view_
 var gameTextY = camera_get_view_y(view_camera[0]) + (string_height("0") * 1.1);
 gameTextY += textAnim;
 
-draw_set_alpha(0.2);
-draw_text_transformed(gameTextX, gameTextY, currentText, 1, 1, 0);
+//draw_set_alpha(0.2);
+//draw_text_transformed(gameTextX, gameTextY, currentText, 1, 1, 0);
 
 
 for (var i = 0; i < 5; i++) {

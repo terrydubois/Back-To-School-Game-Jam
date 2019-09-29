@@ -6,7 +6,7 @@ if (idle) {
 	destX = x;
 	sprite_index = spriteIdle;
 	
-	textY = lerp(textY, textYDest, 0.5);
+	textY = lerp(textY, textYDest, 0.25);
 	
 
 }
@@ -35,6 +35,9 @@ else {
 	if ((place_meeting(x + moveSpeed, y, obj_wall) && x < destX) && !place_free(x, y + 1)) {
 		vspeed = -jumpSpeed;
 	}
+	if (distance_to_object(obj_wallRamp1) < 10) {
+		vspeed = -jumpSpeed;
+	}
 	
 	sprite_index = spriteFollow;
 }
@@ -43,17 +46,25 @@ else {
 
 
 
-if (abs(obj_char.x - x) < 200) {
+if (abs(obj_char.x - x) < 220) {
 	if (idle) {
 		textYDest = y - sprite_get_height(sprite_index) - 20;
 			
-		if (keyboard_check_pressed(vk_space) && x > obj_char.x) {
-			idle = false;
-			obj_control.safe = true;
-			obj_char.moveSpeed += 0.1;
-			obj_control.typeRateIncr--;
+		if (x > obj_char.x) {
+			if (keyboard_check_pressed(vk_space)) {
+				idle = false;
+				obj_control.safe = true;
+				obj_char.moveSpeed += 0.1;
+				obj_control.typeRateIncr--;
 	
-			ds_list_insert(obj_char.followerList, 0, self.id);
+				ds_list_insert(obj_char.followerList, 0, self.id);
+			}
+		}
+		else {
+			if (!balloonsDec) {
+				obj_control.balloons--;
+				balloonsDec = true;
+			}
 		}
 	}
 }

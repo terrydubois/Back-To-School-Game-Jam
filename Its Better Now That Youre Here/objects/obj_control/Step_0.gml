@@ -10,8 +10,8 @@ x = lerp(x, obj_char.x, 0.3);
 y = lerp(y, obj_char.y - 150, 0.3);
 
 if (typeRateIncr <= 0) {
-	typeRateIncr = 15;
-	typeRate = clamp(typeRate - 1, 1, 5);
+	typeRateIncr = 20;
+	typeRate = clamp(typeRate - 1, 2, 5);
 //	textAnimDiv = clamp(textAnimDiv - 100, 50, 1000);
 }
 
