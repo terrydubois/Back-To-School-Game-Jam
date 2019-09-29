@@ -9,6 +9,7 @@ alarm[0] = random_range(60, 120);
 textYDestOriginal = y - (sprite_get_height(sprite_index) * 0.5);
 textYDest = textYDestOriginal;
 textY = textYDest;
+alarm[1] = 60;
 
 
 jonahMode = true;

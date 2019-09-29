@@ -46,7 +46,7 @@ else {
 
 
 
-if (abs(obj_char.x - x) < 220) {
+if (abs(obj_char.x - x) < 220 and obj_control.gameStarted and !obj_control.gameFinished) {
 	if (idle) {
 		textYDest = y - sprite_get_height(sprite_index) - 20;
 			
@@ -67,4 +67,8 @@ if (abs(obj_char.x - x) < 220) {
 			}
 		}
 	}
+}
+
+if (obj_control.gameFinished) {
+	image_speed = 0;
 }

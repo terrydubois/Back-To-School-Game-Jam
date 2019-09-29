@@ -1,4 +1,8 @@
 gameStarted = false;
+gameFinished = false;
+
+cameraPan = false;
+noText = false;
 
 gameTextList = ds_list_create();
 gameTextIndex = 0;
@@ -68,6 +72,8 @@ ds_list_add(gameTextList,
 "I DECIDED TO KEEP THIS FEELING GOING"
 );
 
+lastFollower = -1;
+
 typeRate = 8;
 typePos = 0;
 typeString = "";
@@ -101,6 +107,17 @@ textOutlineHue = 0;
 //alarm[1] = hueRate;
 
 
+panDestX = 35623;
+
 
 pressSpaceTextPlusYDest = 300;
 pressSpaceTextPlusY = pressSpaceTextPlusYDest;
+
+
+
+
+endTextFadeout = false;
+
+
+
+scr_followerEndText();

@@ -7,3 +7,7 @@ moveSpeed = 2.5;
 showCallout = false;
 calloutImageIndex = irandom(4);
 alarm[1] = 5;
+
+
+pressSpaceToEnd = false;
+ableToPressSpaceToEnd = false;

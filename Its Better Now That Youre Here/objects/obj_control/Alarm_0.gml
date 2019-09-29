@@ -1,7 +1,9 @@
 if (typeString == currentText) {
-	gameTextIndex++;
-	typePos = 0;
-	typeString = "";
+	if (!gameFinished) {
+		gameTextIndex++;
+		typePos = 0;
+		typeString = "";
+	}
 }
 else {
 

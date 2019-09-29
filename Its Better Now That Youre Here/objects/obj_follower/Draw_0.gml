@@ -4,7 +4,7 @@ draw_set_valign(fa_middle);
 draw_set_color(c_white);
 draw_set_alpha(1);
 
-if (idle && textYDest != textYDestOriginal) {
+if (idle && textYDest != textYDestOriginal && (abs(obj_char.x - x) < 220)) {
 	draw_set_color(c_black);
 	draw_set_alpha(1);
 	for (var i = 0; i < 7; i++) {

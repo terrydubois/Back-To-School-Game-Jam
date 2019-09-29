@@ -13,6 +13,10 @@ var gameTextY = 0;
 
 var gameText = typeString;
 
+if (gameFinished) {
+	textAnim = 0;
+}
+
 if (!gameStarted) {
 	gameText = "ITS BETTER NOW THAT YOURE HERE";	
 	gameTextX = camera_get_view_x(view_camera[0]) + (camera_get_view_width(view_camera[0]) / 2) - (string_width(gameText) / 2);
@@ -50,8 +54,13 @@ draw_set_font(fnt_pressSpace);
 var pressSpaceTextX = camera_get_view_x(view_camera[0]) + (camera_get_view_width(view_camera[0]) * 0.5);
 var pressSpaceTextY = camera_get_view_y(view_camera[0]) + (camera_get_view_height(view_camera[0]) * 0.75) + pressSpaceTextPlusY;
 
+var pressSpaceText = "PRESS SPACE";
+if (obj_char.ableToPressSpaceToEnd) {
+	pressSpaceText = "PRESS SPACE TO RESTART";
+}
+
 draw_set_color(c_white);
-draw_text(pressSpaceTextX, pressSpaceTextY, "PRESS SPACE");
+draw_text(pressSpaceTextX, pressSpaceTextY, pressSpaceText);
 
 
 
@@ -72,4 +81,8 @@ draw_text(devVarsX, devVarsY + 65, "gameTextIndex: " + string(gameTextIndex));
 draw_text(devVarsX, devVarsY + 80, "gameTextListSize: " + string(ds_list_size(gameTextList)));
 draw_text(devVarsX, devVarsY + 95, "safe: " + string(safe));
 draw_set_halign(fa_right);
-draw_text(devVarsX + 100, devVarsY + 200, "textAnim: " + string(textAnim));
+draw_text(devVarsX + 100, devVarsY + 200, "panDestX: " + string(panDestX));
+
+if (instance_exists(lastFollower)) {
+	draw_text(lastFollower.x, lastFollower.y - 200, "me!!");
+}
