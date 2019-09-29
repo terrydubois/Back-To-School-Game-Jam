@@ -35,7 +35,7 @@ else {
 	if ((place_meeting(x + moveSpeed, y, obj_wall) && x < destX) && !place_free(x, y + 1)) {
 		vspeed = -jumpSpeed;
 	}
-	if (distance_to_object(obj_wallRamp1) < 10) {
+	if (distance_to_object(obj_wallRamp1) <= moveSpeed) {
 		vspeed = -jumpSpeed;
 	}
 	

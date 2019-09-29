@@ -1,3 +1,5 @@
+gameStarted = false;
+
 gameTextList = ds_list_create();
 gameTextIndex = 0;
 safe = false;
@@ -88,8 +90,17 @@ for (var i = 0; i < balloons; i++) {
 }
 
 
-alarm[0] = typeRate;
-
 
 textAnim = 0;
 textAnimDiv = 200;
+
+
+hueRate = 30;
+textOutlineColor = make_color_rgb(237, 21, 104);
+textOutlineHue = 0;
+//alarm[1] = hueRate;
+
+
+
+pressSpaceTextPlusYDest = 300;
+pressSpaceTextPlusY = pressSpaceTextPlusYDest;

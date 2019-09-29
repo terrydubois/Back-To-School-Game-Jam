@@ -6,14 +6,27 @@ else {
 	typeString = "";
 }
 
-x = lerp(x, obj_char.x, 0.3);
-y = lerp(y, obj_char.y - 150, 0.3);
+if (gameStarted) {
+	x = lerp(x, obj_char.x, 0.3);
+	y = lerp(y, obj_char.y - 40, 0.3);
+}
+else {
+	x = 0;
+	y = obj_char.y - 40;
+}
 
 if (typeRateIncr <= 0) {
 	typeRateIncr = 20;
 	typeRate = clamp(typeRate - 1, 2, 5);
-//	textAnimDiv = clamp(textAnimDiv - 100, 50, 1000);
 }
 
 
 textAnim = (sin(current_time / textAnimDiv)) * (obj_char.moveSpeed * 3);
+
+if (gameStarted) {
+	pressSpaceTextPlusYDest = 250;
+}
+else {
+	pressSpaceTextPlusYDest = 0;
+}
+pressSpaceTextPlusY = lerp(pressSpaceTextPlusY, pressSpaceTextPlusYDest, 0.1);
