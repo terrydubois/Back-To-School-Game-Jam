@@ -19,7 +19,7 @@ balloonsDec = false;
 
 
 
-var rando = irandom(5);
+var rando = irandom(6);
 switch (rando) {
 	case 0:
 		spriteIdle = spr_terryIdle;
@@ -51,6 +51,22 @@ switch (rando) {
 		spriteIdle = spr_devinIdle;
 		spriteFollow = spr_devinFollow;
 		break;
-	default:
+	case 6:
+		spriteIdle = spr_manIdle;
+		spriteFollow = spr_manFollow;
 		break;
+	default:
+		instance_destroy();
+		break;
+}
+
+if (irandom(12) == 1) {
+	if (irandom(10) > 5) {
+		spriteIdle = spr_dog1Idle;
+		spriteFollow = spr_dog1Follow;
+	}
+	else {
+		spriteIdle = spr_dog2Idle;
+		spriteFollow = spr_dog2Follow;
+	}
 }

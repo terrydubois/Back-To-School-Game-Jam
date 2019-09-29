@@ -55,6 +55,14 @@
             }
         },
         {
+            "Key": "26d0b9bc-8cec-48c6-ae5d-f15face14dd4",
+            "Value": {
+                "id": "fbf294b5-ea4a-4725-8dbd-ce5c48d8047e",
+                "resourcePath": "sprites\\spr_manFollow\\spr_manFollow.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "278e2979-143b-4c55-b8dd-52e511076d14",
             "Value": {
                 "id": "2ce32546-a595-4d76-8507-bb16de8c0236",
@@ -84,6 +92,14 @@
                 "id": "27fa1db5-030c-4dcc-8737-70a1ff4247ee",
                 "resourcePath": "objects\\obj_char\\obj_char.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "307427bd-b393-449b-a6c0-62109bbeb6fd",
+            "Value": {
+                "id": "4fcb7d57-0668-4496-a118-55fd34066d27",
+                "resourcePath": "sprites\\spr_dog1Idle\\spr_dog1Idle.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -123,6 +139,14 @@
             "Value": {
                 "id": "9d5efe24-cda6-4baa-a7fb-bfe39f09a11f",
                 "resourcePath": "sprites\\spr_ramp1\\spr_ramp1.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "49a851e5-4fd0-4e17-b47e-86c538ecbc92",
+            "Value": {
+                "id": "a13e8cff-1ac0-4ff6-9e43-82500d982045",
+                "resourcePath": "sprites\\spr_dog2Follow\\spr_dog2Follow.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -195,6 +219,22 @@
             "Value": {
                 "id": "13db8f75-6561-42c1-827a-57a0fe457c8e",
                 "resourcePath": "sprites\\spr_follower\\spr_follower.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "6674637c-f2ba-47f3-a3b1-ca20615928af",
+            "Value": {
+                "id": "389804e8-f9fb-4a7d-808c-cbc7a7493770",
+                "resourcePath": "sprites\\spr_dog2Idle\\spr_dog2Idle.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "67e9140d-cbed-4848-8239-b87d7f036a18",
+            "Value": {
+                "id": "346b8696-9bfa-41f9-9cfe-da3ffad11c6a",
+                "resourcePath": "sprites\\spr_manIdle\\spr_manIdle.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -332,6 +372,14 @@
                 "id": "15e4eb7e-75a4-471a-a3bc-164fec634e32",
                 "resourcePath": "objects\\obj_wallRamp2\\obj_wallRamp2.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "b31c8b10-c2ef-4b6a-af3f-10c7f19b5d25",
+            "Value": {
+                "id": "af70f2b7-8188-421d-9e9b-11a6d0d6aee9",
+                "resourcePath": "sprites\\spr_dog1Follow\\spr_dog1Follow.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
