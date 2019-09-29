@@ -22,13 +22,18 @@ if (gameFinished) {
 
 if (gameStarted) {
 	if (cameraPan) {
-		if (abs(x - lastFollower.x) < 5) {
+		if (abs(x - lastFollower.x) > 5) {
 			move_towards_point(lastFollower.x, lastFollower.y - 40, 5);
 		}
 		else {
 			endTextFadeout = true;
 			x = lerp(x, lastFollower.x, 0.1);
 			y = lerp(y, lastFollower.y - 40, 0.1);
+			
+			if (!endAlarmTriggered) {
+				endAlarmTriggered = true;
+				alarm[2] = 300;
+			}
 		}
 	}
 	else {

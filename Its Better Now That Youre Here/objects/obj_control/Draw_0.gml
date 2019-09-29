@@ -65,6 +65,12 @@ draw_text(pressSpaceTextX, pressSpaceTextY, pressSpaceText);
 
 
 
+if (creditsFadein) {
+	creditsAlpha += 0.02;
+	creditsAlpha = clamp(creditsAlpha, 0, 1);
+	draw_sprite_ext(spr_credits, 0, camera_get_view_x(view_camera[0]), camera_get_view_y(view_camera[0]), 1, 1, 0, c_white, creditsAlpha);
+}
+
 
 // dev vars
 /*

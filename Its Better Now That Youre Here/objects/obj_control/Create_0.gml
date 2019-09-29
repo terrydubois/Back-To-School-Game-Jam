@@ -117,7 +117,12 @@ pressSpaceTextPlusY = pressSpaceTextPlusYDest;
 
 
 endTextFadeout = false;
+creditsFadein = false;
+creditsAlpha = 0;
 
 
 
 scr_followerEndText();
+
+
+endAlarmTriggered = false;

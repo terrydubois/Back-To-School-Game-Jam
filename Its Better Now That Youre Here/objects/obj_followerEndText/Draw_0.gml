@@ -6,7 +6,7 @@ draw_set_alpha(alpha);
 
 if (plusYDest == 0 and alpha > 0) {
 	draw_set_color(c_black);
-	draw_set_alpha(1);
+	draw_set_alpha(alpha);
 	for (var i = 0; i < 7; i++) {
 		draw_text(x + lengthdir_x(1, (360 / 8) * i), y + lengthdir_y(1, (360 / 8) * i), followerText);
 	}
