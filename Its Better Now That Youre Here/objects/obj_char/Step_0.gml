@@ -1,15 +1,38 @@
-if (place_free(x, y + vspeed + 1)) {
+//if (place_free(x, y + vspeed + 1)) {
 	gravity = 1;
 	gravity_direction = 270;
-}
+//}
 
 if (keyboard_check_pressed(vk_up) && !place_free(x, y + 1)) {
-	vspeed = -10;
+	vspeed = -jumpSpeed;
 }
 
-if (keyboard_check(vk_left) && place_free(x - 5, y)) {
-	x -= 5;
+/*
+if (keyboard_check(vk_left) && place_free(x - moveSpeed, y)) {
+	hspeed = -moveSpeed;
 }
-if (keyboard_check(vk_right) && place_free(x + 5, y)) {
-	x += 5;
+else if (keyboard_check(vk_right) && place_free(x + moveSpeed, y)) {
+	hspeed = moveSpeed;
+}
+else {
+	hspeed = 0;
+}
+*/
+if (place_meeting(x + moveSpeed + 3, y, obj_wallRamp1)) {
+	vspeed = -jumpSpeed;
+}
+if ((place_meeting(x + moveSpeed, y, obj_wall)) && !place_free(x, y + 1)) {
+	vspeed = -jumpSpeed;
+}
+if (distance_to_object(obj_wallRamp1) < 5) {
+	vspeed = -jumpSpeed;
+}
+
+
+	
+if (place_free(x + moveSpeed, y)) {
+	hspeed = moveSpeed;
+}
+else {
+	hspeed = 0;
 }
